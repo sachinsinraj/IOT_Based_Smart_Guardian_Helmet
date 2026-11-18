@@ -1,0 +1,126 @@
+{
+  "Rule-based": {
+    "accuracy": 0.9361904761904762,
+    "precision": 1.0,
+    "recall": 0.5533333333333333,
+    "f1": 0.7124463519313304,
+    "TP": 83,
+    "FP": 0,
+    "FN": 67,
+    "TN": 900,
+    "false_alarm_rate": 0.0,
+    "cv_f1_mean": null,
+    "cv_f1_std": null
+  },
+  "Rule-based (calibrated)": {
+    "accuracy": 0.9733333333333334,
+    "precision": 1.0,
+    "recall": 0.8133333333333334,
+    "f1": 0.8970588235294118,
+    "TP": 122,
+    "FP": 0,
+    "FN": 28,
+    "TN": 900,
+    "false_alarm_rate": 0.0,
+    "cv_f1_mean": null,
+    "cv_f1_std": null
+  },
+  "Logistic Regression": {
+    "accuracy": 0.9980952380952381,
+    "precision": 0.9933333333333333,
+    "recall": 0.9933333333333333,
+    "f1": 0.9933333333333333,
+    "TP": 149,
+    "FP": 1,
+    "FN": 1,
+    "TN": 899,
+    "false_alarm_rate": 0.0011111111111111111,
+    "cv_f1_mean": 0.977298639553495,
+    "cv_f1_std": 0.008176762064910154
+  },
+  "Decision Tree": {
+    "accuracy": 0.9971428571428571,
+    "precision": 1.0,
+    "recall": 0.98,
+    "f1": 0.98989898989899,
+    "TP": 147,
+    "FP": 0,
+    "FN": 3,
+    "TN": 900,
+    "false_alarm_rate": 0.0,
+    "cv_f1_mean": 0.9971014492753623,
+    "cv_f1_std": 0.005797101449275343
+  },
+  "Random Forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "TP": 150,
+    "FP": 0,
+    "FN": 0,
+    "TN": 900,
+    "false_alarm_rate": 0.0,
+    "cv_f1_mean": 0.9985611510791367,
+    "cv_f1_std": 0.002877697841726601
+  },
+  "_multiclass_rf_accuracy": 0.9971428571428571,
+  "_multiclass_report": {
+    "normal_riding": {
+      "precision": 0.995260663507109,
+      "recall": 1.0,
+      "f1-score": 0.997624703087886,
+      "support": 420.0
+    },
+    "hard_braking": {
+      "precision": 1.0,
+      "recall": 0.9857142857142858,
+      "f1-score": 0.9928057553956835,
+      "support": 210.0
+    },
+    "pothole_bump": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "helmet_drop": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 90.0
+    },
+    "accident": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    },
+    "accuracy": 0.9971428571428571,
+    "macro avg": {
+      "precision": 0.9979471603257313,
+      "recall": 0.9971428571428571,
+      "f1-score": 0.9975320750762153,
+      "support": 1050.0
+    },
+    "weighted avg": {
+      "precision": 0.9971571462236802,
+      "recall": 0.9971428571428571,
+      "f1-score": 0.9971361609252922,
+      "support": 1050.0
+    }
+  },
+  "_n_train": 2450,
+  "_n_test": 1050,
+  "_calibrated_thresholds": {
+    "IMPACT_G": 3.0,
+    "TILT_DEG": 15,
+    "SPEED_DROP": 8
+  },
+  "_rule_missed_accidents": {
+    "n": 67,
+    "mean_tilt": 49.90534256509949,
+    "mean_peak": 7.997042875929088
+  },
+  "_rule_false_alarms_by_class": {}
+}

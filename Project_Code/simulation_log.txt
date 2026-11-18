@@ -1,0 +1,27 @@
+# SOFTWARE SIMULATION - GPS/GSM events below are simulated, no hardware attached
+[t=   0.00s] --- Scenario: pothole ---
+[t=   1.00s] MONITORING  speed=84 km/h  |a|peak=7.7 g  gyro peak=118 deg/s
+[t=   3.00s] FEATURES    tilt change=2 deg  speed drop=15 km/h
+[t=   3.00s] DECISION    NOT an accident (conditions not jointly satisfied) -> keep monitoring
+[t=   6.00s] --- Scenario: braking ---
+[t=   7.00s] MONITORING  speed=63 km/h  |a|peak=1.2 g  gyro peak=36 deg/s
+[t=   9.00s] FEATURES    tilt change=2 deg  speed drop=15 km/h
+[t=   9.00s] DECISION    NOT an accident (conditions not jointly satisfied) -> keep monitoring
+[t=  12.00s] --- Scenario: drop ---
+[t=  13.00s] MONITORING  speed=0 km/h  |a|peak=8.7 g  gyro peak=292 deg/s
+[t=  15.00s] FEATURES    tilt change=83 deg  speed drop=0 km/h
+[t=  15.00s] DECISION    NOT an accident (conditions not jointly satisfied) -> keep monitoring
+[t=  18.00s] --- Scenario: accident_cancel ---
+[t=  19.00s] MONITORING  speed=37 km/h  |a|peak=5.9 g  gyro peak=806 deg/s
+[t=  21.00s] FEATURES    tilt change=57 deg  speed drop=26 km/h
+[t=  21.00s] DECISION    POSSIBLE ACCIDENT -> buzzer ON, 15 s cancel window started
+[t=  27.40s] BUTTON      pressed by rider -> alert CANCELLED, buzzer OFF
+[t=  32.00s] --- Scenario: accident_sms ---
+[t=  33.00s] MONITORING  speed=35 km/h  |a|peak=14.0 g  gyro peak=824 deg/s
+[t=  35.00s] FEATURES    tilt change=53 deg  speed drop=18 km/h
+[t=  35.00s] DECISION    POSSIBLE ACCIDENT -> buzzer ON, 15 s cancel window started
+[t=  50.00s] TIMEOUT     no cancellation -> reading GPS fix
+[t=  51.20s] GPS         lat=28.6139 lon=77.2090
+[t=  52.50s] GSM         AT+CMGS to +91XXXXXXXX01 ... +CMGS: OK
+[t=  52.50s] GSM         AT+CMGS to +91XXXXXXXX02 ... +CMGS: OK
+[t=  52.60s] SMS TEXT    'EMERGENCY! Possible accident detected. Location: https://maps.google.com/?q=28.6139,77.2090'
